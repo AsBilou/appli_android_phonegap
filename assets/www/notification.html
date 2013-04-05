@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connection</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-responsive.min.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        function notification(){
+            navigator.notification.alert(device.model,alertDismissed,'Your device','Done');
+           navigator.notification.vibrate(500);
+            navigator.notification.beep(1);
+        }
+
+        function alertDismissed() {
+            // do something
+        }
+
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Notification</h1>
+    <a class="btn btn-danger" onclick="navigator.notification.vibrate(1000);">Vibration</a>
+    <a class="btn btn-primary" onclick="navigator.notification.beep(2);">Bip</a>
+    <a class="btn btn-success" onclick="notification();">Mixte</a>
+    <a class="btn" href="index.html">Index</a>
+</div>
+</body>
+</html>
